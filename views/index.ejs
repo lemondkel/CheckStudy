@@ -195,8 +195,45 @@
                 </a>
             </div>
         </div>
+
+        <div class="col-sm-6 col-md-4">
+            <!--
+               ****** USER WIDGET *******
+               -->
+            <div id="user-widget" class="list-group">
+                <div class="list-group-item heading">
+                    <img class="media-object img-circle"
+                         src="/images/test.jpg">
+                    <div class="text-wrap">
+                        <h4 class="list-group-item-heading"><%=data%></h4>
+                        <p class="list-group-item-text">15,421문제 맞춤</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <a href="#" class="list-group-item">
+                    <i class="fa fa-user fa-lg pull-right"></i>
+                    <p class="list-group-item-text">문자메세지 보내기</p>
+                </a>
+                <a href="#" class="list-group-item">
+                    <i class="fa fa-bar-chart-o fa-lg pull-right"></i>
+                    <p class="list-group-item-text">만든 문제 조회</p>
+                </a>
+                <a href="#" class="list-group-item">
+                    <i class="fa fa-wrench fa-lg pull-right"></i>
+                    <p class="list-group-item-text">정답률 조회</p>
+                </a>
+                <a href="#" class="list-group-item">
+                    <i class="fa fa-calendar fa-lg pull-right"></i>
+                    <p class="list-group-item-text">개인정보 조회</p>
+                </a>
+            </div>
+        </div>
     </div>
 </div>
 </body>
+<script>
+    var data = '<%=data%>';
+    console.log(data);
+</script>
 <script src="/javascripts/main.js"></script>
 </html>
