@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PGH Study</title>
+    <meta name="viewport"
+          content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+    <script src="/javascripts/jquery-3.2.1.min.js"></script>
+    <script src="/javascripts/Chart.min.js"></script>
+    <script src="/javascripts/bootstrap.min.js"></script>
+    <script src="/javascripts/jquery.simpleWeather.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div id="nav-widget" class="btn-group btn-group-justified">
+                <div class="btn-group">
+                    <button type="button" class="btn text-uppercase" style="text-align: center;">
+                        <i class="fa fa-map-marker fa-2x"></i>
+                        Challenge
+                         <span class="badge"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <!-- COLUMN ONE -->
+        <div class="col-sm-6 col-md-4">
+            <!--
+               ****** LINE CHART WIDGET *******
+               -->
+            <div id="line-chart-widget" class="panel">
+                <div class="panel-heading">
+                    <h4 class="text-uppercase"><strong>정답률 동향</strong><span class="label pull-right"
+                                                                            id="first-chart-all-sum"></span><br>
+                        <small>Nasdaq: AAPL</small>
+                    </h4>
+                </div>
+                <div class="panel-body">
+                    <canvas id="myLineChart"></canvas>
+                </div>
+                <div class="panel-footer">
+                    <div class="list-block">
+                        <ul class="text-center legend">
+                            <li>
+                                <h3 id="first-chart-week-sum"></h3>
+                                최근 2주일 정답률
+                            </li>
+                            <li>
+                                <h3>28.44 %</h3>
+                                전체 정답률
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="chart-block clearfix">
+                        <div class="pull-left">
+                            월간 정답률
+                            <canvas id="myBarChart"></canvas>
+                        </div>
+                        <div class="pull-right">
+                            연간 정답률<br>
+                            <div class="change text-center"><i class="fa fa-plus"></i> 86.01</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="row">
+                <div class="col-xs-3">
+                    &lt;!&ndash;
+                       ****** SOCIAL BUTTON WIDGET *******
+                       &ndash;&gt;
+                    <div id="social-widget" class="btn-group-vertical mrg-btm-20">
+                        <button type="button" class="btn facebook"><span class="fa-stack fa-lg"><i
+                                        class="fa fa-circle fa-stack-2x"></i><i
+                                        class="fa fa-facebook fa-stack-1x fa-inverse"></i></span></button>
+                        <button type="button" class="btn pinterest"><i class="fa fa-pinterest fa-3x"></i></button>
+                        <button type="button" class="btn twitter"><span class="fa-stack fa-lg"><i
+                                        class="fa fa-circle fa-stack-2x"></i><i
+                                        class="fa fa-twitter fa-stack-1x fa-inverse"></i></span></button>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+
+
+        <!-- COLUMN TWO -->
+        <div class="col-sm-6 col-md-4">
+            <!--
+               ****** CHART WIDGET *******
+               -->
+            <div id="pie-chart-widget" class="panel">
+                <div class="panel-heading text-center">
+                    <h5 class="text-uppercase"><strong>틀린 문제 성향</strong></h5>
+                </div>
+                <div class="panel-body">
+                    <canvas id="myPieChart"></canvas>
+                </div>
+                <div class="panel-footer">
+                    <div class="list-block">
+                        <ul class="text-center legend">
+                            <li class="video" style="margin-right: 1px;">
+                                Programming
+                                <h2>62%</h2>
+                            </li>
+                            <li class="photo">
+                                Game
+                                <h2>21%</h2>
+                            </li>
+                            <li class="audio" style="margin-left: 1px;">
+                                Music
+                                <h2>10%</h2>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn-group btn-group-justified text-uppercase text-center">
+                        <a class="btn btn-default" role="button"><i class="fa fa-cloud-upload fa-2x"></i>
+                            <small>목록 조회</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- COLUMN THREE -->
+        <div class="col-sm-6 col-md-4 ">
+            <!--
+               ****** PROFILE WIDGET *******
+               -->
+            <div id="profile-widget" class="panel">
+                <div class="panel-heading">
+                </div>
+                <div class="panel-body">
+                    <div class="media">
+                        <a class="pull-left" href="#">
+                            <img class="media-object img-circle"
+                                 src="/images/test.jpg">
+                        </a>
+                        <div class="media-body">
+                            <h2 class="media-heading">scv_689789123</h2>
+                            <br/>
+                            <h4>다음 중 알맞은 내용은?</h4>
+                            <br/>
+                            1. 자바는 절차지향형 언어다.
+                            <br/>
+                            2. 자바는 포인터가 있다.
+                            <br/>
+                            3. 자바는 객체지향형 언어다.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <div class="btn-group btn-group-justified">
+                        <a class="btn btn-default" role="button"><i class="fa fa-eye"></i>1</a>
+                        <a class="btn btn-default" role="button"><i class="fa fa-comment"></i> 2</a>
+                        <a class="btn btn-default" role="button"><i class="fa fa-eye"></i>3</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4">
+            <!--
+               ****** USER WIDGET *******
+               -->
+            <div id="user-widget" class="list-group">
+                <div class="list-group-item heading">
+                    <img class="media-object img-circle"
+                         src="/images/test.jpg">
+                    <div class="text-wrap">
+                        <h4 class="list-group-item-heading">scv_689789123</h4>
+                        <p class="list-group-item-text">15,421문제 맞춤</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <a href="#" class="list-group-item">
+                    <i class="fa fa-user fa-lg pull-right"></i>
+                    <p class="list-group-item-text">문자메세지 보내기</p>
+                </a>
+                <a href="#" class="list-group-item">
+                    <i class="fa fa-bar-chart-o fa-lg pull-right"></i>
+                    <p class="list-group-item-text">만든 문제 조회</p>
+                </a>
+                <a href="#" class="list-group-item">
+                    <i class="fa fa-wrench fa-lg pull-right"></i>
+                    <p class="list-group-item-text">정답률 조회</p>
+                </a>
+                <a href="#" class="list-group-item">
+                    <i class="fa fa-calendar fa-lg pull-right"></i>
+                    <p class="list-group-item-text">개인정보 조회</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="/javascripts/main.js"></script>
+</html>
