@@ -21,8 +21,8 @@ router.get('/', function(req, res, next) {
         console.log('Reponse received', body);
 
         parser.parseString(body, function (err, result) {
-            console.log(JSON.stringify(result.response.body[0].items[0].item[0]));
-            data.push(JSON.stringify(result.response.body[0].items[0].item[0]));
+            // console.log(JSON.stringify(result.response.body[0].items[0].item[0]));
+            data.push(result.response.body[0].items[0].item[0]);
         });
 
         res.render('index', { title: 'Express', data: data });

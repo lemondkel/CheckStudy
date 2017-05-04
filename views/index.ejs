@@ -205,8 +205,8 @@
                     <img class="media-object img-circle"
                          src="/images/test.jpg">
                     <div class="text-wrap">
-                        <h4 class="list-group-item-heading"><%=data%></h4>
-                        <p class="list-group-item-text">15,421문제 맞춤</p>
+                        <h4 class="list-group-item-heading"><%=data[0].statCdCntnKor1%></h4>
+                        <p class="list-group-item-text">무역지수(<%=data[0].balPayments%>)</p>
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -231,9 +231,5 @@
     </div>
 </div>
 </body>
-<script>
-    var data = '<%=data%>';
-    console.log(data);
-</script>
 <script src="/javascripts/main.js"></script>
 </html>
