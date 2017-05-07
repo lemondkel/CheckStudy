@@ -205,8 +205,8 @@
                     <img class="media-object img-circle"
                          src="/images/test.jpg">
                     <div class="text-wrap">
-                        <h4 class="list-group-item-heading"><%=data[0].statCdCntnKor1%></h4>
-                        <p class="list-group-item-text">무역지수(<%=data[0].balPayments%>)</p>
+                        <h4 class="list-group-item-heading">asd</h4>
+                        <p class="list-group-item-text">무역지수</p>
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -232,4 +232,27 @@
 </div>
 </body>
 <script src="/javascripts/main.js"></script>
+<script>
+
+    var balPayments = '<%=balPayments%>';
+    var expCnt = '<%=expCnt%>';
+    var expDlr = '<%=expDlr%>';
+    var impCnt = '<%=impCnt%>';
+    var impDlr = '<%=impDlr%>';
+    var statCd = '<%=statCd%>';
+    var statCdCntnKor1 = '<%=statCdCntnKor1%>';
+    var year = '<%=year%>';
+
+    balPayments = balPayments.split(',');
+    expCnt = expCnt.split(',');
+    expDlr = expDlr.split(',');
+    impCnt = impCnt.split(',');
+    impDlr = impDlr.split(',');
+    statCd = statCd.split(',');
+    statCdCntnKor1 = statCdCntnKor1.split(',');
+    year = year.split(',');
+
+    console.log(statCdCntnKor1);
+    console.log(year);
+</script>
 </html>
